@@ -1,0 +1,95 @@
+body{
+  // background-color: red;
+  @include phone{
+    // background-color: yellow;
+  };
+  font-size: 16px;
+}
+
+header{
+  background: $main;
+  color: white;
+  height: 2cm;
+  h1{
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  
+}
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.left-column, .right-column{
+  padding: 1.5rem;
+}
+.right-column{
+  width: 30%;
+  background-color: $right;
+  min-height: 27.7cm;
+  padding: 1.5rem;
+  img{
+    width: 100%;
+  }
+}
+
+.left-column{
+  width: 70%;
+  border: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.point{
+  display: flex;
+  width: 100%;
+}
+
+.content, .period{
+  width: 50%;
+  border: 1px solid red;
+  min-height: 50px;
+  
+}
+.left-title{
+.period{
+  h5{
+    position: relative;
+    border: 1px solid red;
+    
+  }
+  h5::after{
+    position:absolute;
+    display: block;
+    content: "";
+    right: 0;
+    top: 50%;
+    width: 50%;
+    height: 2px;
+    background: $second;
+  }
+}
+}
+
+.right-title{
+  .period{
+    h5{
+      text-align: right;
+      position: relative;
+      border: 1px solid red;
+      
+    }
+    h5::after{
+      position:absolute;
+      display: block;
+      content: "";
+      left: 0;
+      top: 50%;
+      width: 50%;
+      height: 2px;
+      background: $second;
+    }
+  }
+  }

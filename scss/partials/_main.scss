@@ -16,48 +16,126 @@ header{
   }
   
 }
+.zgoda{
+  margin-top: 1rem;
+  border-top: 1px solid black;
+  font-size: 8/12 +rem;
+}
 .container{
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
 }
-.left-column, .right-column{
-  padding: 1.5rem;
-}
+
 .right-column{
-  width: 30%;
+  width: 33%;
   background-color: $right;
   min-height: 27.7cm;
-  padding: 1.5rem;
+  padding: 10/12 + rem;
   img{
     width: 100%;
+    
+  }
+  h4{
+    margin: 1rem 0;
+  }
+  ul{
+    list-style-type: none; 
+    font-size: 11/12 + rem;
+    li{
+      margin-top: 0.5rem;
+      word-break: break-all;
+      
+      &[class="green-border"]{
+        border: 1px solid $second;
+        height: 1rem;
+        border-radius: 0.5rem;
+        background-color: white;
+      }
+      .eighty, .sixty, .ten{
+        height: 100%;
+        border-radius: 0.5rem;
+        background-color: $second;
+      }
+      .eighty{
+        width: 80%;
+        
+      }
+      .sixty{
+        width: 70%;
+      }
+      .ten{
+        width: 10%;
+      }
+    }
+  }
+  i{
+    color: $second;
   }
 }
 
 .left-column{
-  width: 70%;
-  border: 1px solid red;
+  padding: 16/12 + rem;
+  width: 67%;
   display: flex;
   flex-wrap: wrap;
-  
+  h4{
+    width: 50%;
+    border-right: 5px solid $second;
+    padding-bottom: 15px;
+    color: $second;
+  }
 }
 
 .point{
   display: flex;
   width: 100%;
+  // margin-bottom: 15px;
 }
 
 .content, .period{
   width: 50%;
-  border: 1px solid red;
+  // border: 1px solid red;
   min-height: 50px;
+  padding-top: 15px;
+  ul{
+    // list-style-position: inside;
+    
+    
+    li{
+      // border: 1px solid red;
+      font-size: 11/12 + rem;
+      text-align: left;
+      padding-top: 5px;
+      margin-left: 20px;
+      
+    }
+  }
   
 }
-.left-title{
+h5{
+  font-size: 10/12 + rem;
+}
 .period{
+h5{
+  font-weight: normal;
+  
+}
+
+
+
+
+}
+p{
+  font-size: 11/12 + rem;
+}
+.point:nth-of-type(2n){
+.period{
+  border-right: 5px solid $second;
+  
   h5{
     position: relative;
-    border: 1px solid red;
+    // border: 2px solid blue;
     
   }
   h5::after{
@@ -71,14 +149,19 @@ header{
     background: $second;
   }
 }
+.content{
+  text-align: right;
+  padding-left: 5px;
+}
 }
 
-.right-title{
+.point:nth-of-type(2n+1){
   .period{
+    
     h5{
       text-align: right;
       position: relative;
-      border: 1px solid red;
+      // border: 2px solid yellow;
       
     }
     h5::after{
@@ -92,4 +175,8 @@ header{
       background: $second;
     }
   }
+.content{
+  border-right: 5px solid $second;
+  padding-right: 5px;
+}
   }
